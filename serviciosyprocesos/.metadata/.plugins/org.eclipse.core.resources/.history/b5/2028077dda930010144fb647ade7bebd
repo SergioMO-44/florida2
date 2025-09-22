@@ -1,0 +1,9 @@
+package es.florida.holamundo;
+
+public class HolaMundo {
+
+	public static void main(String[] args) {
+		String nombre1= args[2];
+		System.out.println("Hola mundo " + nombre1);
+      }
+}

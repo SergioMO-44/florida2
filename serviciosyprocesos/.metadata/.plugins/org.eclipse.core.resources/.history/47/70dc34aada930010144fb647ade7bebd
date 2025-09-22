@@ -1,0 +1,14 @@
+package es.florida.holamundo;
+
+import java.util.Scanner;
+
+public class HolaMundo {
+
+	public static void main(String[] args) {
+		String nombre1= args[2];
+		Scanner teclado = new Scanner(System.in);
+		System.out.print("Introduce tu nommbre: ");
+		String nombre2 = teclado.nextLine();	
+		System.out.println("Hola mundo " + nombre1);
+      }
+}

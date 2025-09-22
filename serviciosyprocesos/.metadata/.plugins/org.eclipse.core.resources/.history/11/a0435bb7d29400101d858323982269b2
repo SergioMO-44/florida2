@@ -1,0 +1,26 @@
+package es.florida.Ejercicios;
+import java.io.BufferedReader;
+import java.io.Console;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Scanner;
+
+public class EjerciciosTema1 {
+
+	public static void main(String[] args) {
+		public static void ejercicio1 () {
+			System.out.println("Ejercicio 1");
+			System.out.println("Realiza unjprcgrama que a partir de dos números (introducidos en el código) muestre su suma por pantalla.");
+			int a=1;
+			int b=2;
+			System.out.println("Suma de a (1) + b (2) = 1 + 2 = " +  a +b);
+			System.out.printIn("Suma de a (1) + b (2) =1 + 2 = " + (a + b));
+	}
+		public static void ejercicio2() throws IOException {
+			System.out.println(&quot;Ejercicio 2&quot;);
+			System.out.print1n(&quot;Programa Java que lea un nombre desde teclado y muestre por pantalla un mensaje tipo &quot;Hola xxxxx&quot;.&quot;);InputStreamReader isr = new
+			InputStreamReader(System.in);
+			BufferedReader br = new BufferedReader(isr);
+			System.out.print(&quot;Dime tu nombre: &quot;);
+			String nombre=br.readLine();
+}

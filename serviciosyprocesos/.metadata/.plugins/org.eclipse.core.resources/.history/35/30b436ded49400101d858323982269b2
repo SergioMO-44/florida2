@@ -1,0 +1,21 @@
+package es.florida.Ejercicios;
+import java.io.BufferedReader;
+import java.io.Console;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Scanner;
+
+public class EjerciciosTema1 {
+
+	public static void main(String[] args) {
+		ejercicio1();
+		}
+	public static void ejercicio1 () {
+		System.out.println("Ejercicio 1");
+		System.out.println("Realiza un programa que a partir de dos números (introducidos en el código) muestre su suma por pantalla.");
+		int a=1;
+		int b=2;
+		System.out.println("Suma de a (1) + b (2) = 1 + 2 = " +  a +b);//concatena strings
+		System.out.println("Suma de a (1) + b (2) =1 + 2 = " + (a + b));
+	}
+}

@@ -1,0 +1,497 @@
+package es.florida.Ejercicios;
+import java.io.BufferedReader;
+import java.io.Console;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Scanner;
+
+public class EjerciciosTema1 {
+
+	public static void main(String[] args) throws IOException {
+		Scanner scanner = new Scanner(System.in);
+        int opcion;
+
+        System.out.println("📘 Bienvenido al selector de ejercicios del Tema 1");
+        System.out.println("Introduce el número de ejercicio que quieres ejecutar (1–38):");
+
+        opcion = scanner.nextInt();
+
+        switch (opcion) {
+            case 1: ejercicio1(); break;
+            case 2: ejercicio2(); break;
+            case 3: ejercicio3(); break;
+            case 4: ejercicio4(); break;
+            case 5: ejercicio5(); break;
+            case 6: ejercicio6(); break;
+            case 7: ejercicio7(); break;
+            case 8: ejercicio8(); break;
+            case 9: ejercicio9(); break;
+            case 10: ejercicio10(); break;
+            case 11: ejercicio11(); break;
+            case 12: ejercicio12(); break;
+            case 13: ejercicio13(); break;
+            case 14: ejercicio14(); break;
+            case 15: ejercicio15(); break;
+            case 16: ejercicio16(); break;
+            case 17: ejercicio17(); break;
+            case 18: ejercicio18(); break;
+            case 19: ejercicio19(); break;
+            case 20: ejercicio20(); break;
+            case 21: ejercicio21(); break;
+            case 22: ejercicio22(); break;
+            case 23: ejercicio23(); break;
+            case 24: ejercicio24(); break;
+            case 25: ejercicio25(); break;
+            case 26: ejercicio26(); break;
+            case 27: ejercicio27(); break;
+            case 28: ejercicio28(); break;
+            case 29: ejercicio29(); break;
+            case 30: ejercicio30(); break;
+            case 31: ejercicio31(); break;
+            case 32: ejercicio32(); break;
+            case 33: ejercicio33(); break;
+            case 34: ejercicio34(); break;
+            case 35: ejercicio35(); break;
+            case 36: ejercicio36(); break;
+            case 37: ejercicio37(); break;
+            case 38: ejercicio38(); break;
+            default:
+                System.out.println("❌ Número no válido. Por favor, introduce un número entre 1 y 38.");
+        }
+
+        scanner.close();
+    }
+
+	public static void ejercicio1 () {
+		System.out.println("Ejercicio 1");
+		System.out.println("Realiza un programa que a partir de dos números (introducidos en el código) muestre su suma por pantalla.");
+		int a=1;
+		int b=2;
+		System.out.println("Suma de a (1) + b (2) = 1 + 2 = " +  a +b);//concatena strings
+		System.out.println("Suma de a (1) + b (2) =1 + 2 = " + (a + b));
+	}
+
+	public static void ejercicio2()  throws IOException {
+	    System.out.println("Ejercicio 2");
+	    System.out.println("Programa Java que lea un nombre desde teclado y muestre por pantalla un mensaje tipo \r\n"
+	    		+ "“Hola xxxxx”. ");
+	        InputStreamReader isr = new InputStreamReader(System.in);
+	    	BufferedReader br = new BufferedReader(isr);
+	    	System.out.print("Dime tu nombre: ");
+	    	String nombre=br.readLine();
+	    	System.out.println("Hola " + nombre);
+	    	isr.close();
+	    	br.close();
+	}
+
+	public static void ejercicio3() throws IOException {
+	    System.out.println("Ejercicio 3");
+	    System.out.println(" Realiza un programa que lea dos números desde teclado y muestre la suma por pantalla. ");
+	    InputStreamReader isr = new InputStreamReader(System.in);
+	    BufferedReader br = new BufferedReader(isr);
+	    System.out.print("Numero 1: ");
+	    String numero1string = br.readLine( );
+	    System.out.print("Numero 2: ");
+	    String numero2string =br.readLine( );
+	    System.out.println("Suma de " + numero1string + " y " + numero2string + " = "  + (Integer.parseInt(numero1string) + Integer.parseInt(numero2string)));
+	    isr.close();
+	    br.close();
+	}
+
+	public static void ejercicio4() throws IOException {
+	    System.out.println("Ejercicio 4");
+	    System.out.println("Programa que lea dos números desde teclado y muestre el menor y el mayor en pantalla. Si son iguales deberá mostrar un mensaje indicándolo.");
+	    InputStreamReader isr = new InputStreamReader(System.in);
+	    BufferedReader br = new BufferedReader(isr);
+	    System.out.print("Numero 1: ");
+	    String numero1string = br.readLine();
+	    int numero1 = Integer.parseInt(numero1string);
+	    System.out.print("Numero 2: ");
+	    String numero2string = br.readLine();
+	    int numero2 = Integer.parseInt(numero2string);
+	    if (numero1 > numero2) {
+	    	System.out.println("Numero mayor: " + numero1 + " Numero menor: "  + numero2);
+	    } else if (numero1 < numero2) { 
+	    	System.out.println("Numero mayor: " + numero2 + " Numero menor: "  + numero1);
+	    } else { 
+	    	System.out.println("Los numeros son iguales");
+	    }
+	    isr.close();
+	    br.close();
+	    }
+    
+
+	public static void ejercicio5() throws IOException {
+	    System.out.println("Ejercicio 5");
+	    System.out.println("Realiza un programa que lea dos números desde teclado en un bucle repetitivo. El bucle deberá finalizar cuando los números leídos sean iguales. ");
+	    InputStreamReader isr = new InputStreamReader(System.in);
+	    BufferedReader br = new BufferedReader(isr);
+	    int numero1 = 1;
+	    int numero2 = 2;
+	    while (numero1 != numero2) {
+	    	System.out.print("Numero 1: ");
+	    	String numero1string = br.readLine();
+	    	numero1 = Integer.parseInt(numero1string);
+	    	System.out.print("Numero 2: ");
+	    	String numero2string = br.readLine();
+	    	numero2 = Integer.parseInt(numero2string);
+	    	if (numero1 == numero2) {
+	    		System.out.println("Los numeros son iguales - Termina el programa");
+	    	}
+	    	}
+    	isr.close();
+    	br.close();
+	    }
+	    
+	
+
+	public static void ejercicio6() throws IOException {
+	    System.out.println("Ejercicio 6");
+	    System.out.println("Realiza un programa que lea cinco números desde teclado y muestre la suma por pantalla. Sugerencia: utilizar una estructura de bucle. ");
+	    InputStreamReader isr = new InputStreamReader(System.in);
+	    BufferedReader br = new BufferedReader(isr);
+	    int numero;
+	    int suma = 0;
+	    for (int i = 0; i < 5; i++) {
+	    	System.out.print("Numero " + (i + 1) + ": ");
+	    	String numerostring = br.readLine();
+	    	numero = Integer.parseInt(numerostring);
+	    	suma = suma + numero;
+	    }
+	    System.out.println("Suma: " + suma);
+	    isr.close();
+	    br.close();
+	}
+
+	public static void ejercicio7() throws IOException {
+	    System.out.println("Ejercicio 7");
+	    System.out.println("Resolver el ejercicio anterior empleando otra estructura de bucle. ");
+	    InputStreamReader isr = new InputStreamReader(System.in);
+	    BufferedReader br = new BufferedReader(isr);
+	    int numero;
+	    int suma = 0;
+	    int contador = 0;
+	    while(contador < 5) {
+	    	System.out.print("Numero " + (contador + 1) + ": ");
+	    	String numerostring = br.readLine();
+	    	numero = Integer.parseInt(numerostring);
+	    	suma = suma + numero;
+	    	contador++;
+	    }
+	    System.out.println("Suma: " + suma);
+	    isr.close();
+	    br.close();
+	}
+
+	public static void ejercicio8() throws IOException {
+	    System.out.println("Ejercicio 8");
+	    System.out.println("Desarrolla un programa que lea por teclado un número del 1 al 12 e indique por pantalla a \r\n"
+	    		+ "qué mes del año en texto corresponde. Sugerencia: utilizar una estructura de programación \r\n"
+	    		+ "if … else. ");
+	    InputStreamReader isr = new InputStreamReader(System.in);
+	    BufferedReader br = new BufferedReader(isr);
+	    System.out.print("Numero mes: ");
+	    String numeromes = br. readLine();
+	    if (numeromes.equals("1")) {
+	    	System.out.println("Enero");
+	    } else if (numeromes.equals("2")) {
+	        System.out.println("Febrero");
+	    } else if (numeromes.equals("3")) {
+	        System.out.println("Marzo");
+	    } else if (numeromes.equals("4")) {
+	        System.out.println("Abril");
+	    } else if (numeromes.equals("5")) {
+	        System.out.println("Mayo");
+	    } else if (numeromes.equals("6")) {
+	        System.out.println("Junio");
+	    } else if (numeromes.equals("7")) {
+	        System.out.println("Julio");
+	    } else if (numeromes.equals("8")) {
+	        System.out.println("Agosto");
+	    } else if (numeromes.equals("9")) {
+	        System.out.println("Septiembre");
+	    } else if (numeromes.equals("10")) {
+	        System.out.println("Octubre");
+	    } else if (numeromes.equals("11")) {
+	        System.out.println("Noviembre");
+	    } else if (numeromes.equals("12")) {
+	        System.out.println("Diciembre");
+	    } else {
+	        System.out.println("Número inválido. Debe estar entre 1 y 12.");
+	    }
+
+	    br.close();
+	    isr.close();
+	}
+
+
+	public static void ejercicio9() throws IOException {
+	    System.out.println("Ejercicio 9");
+	    System.out.println("Resolver el ejercicio anterior empleando otra estructura condicional.");
+	    InputStreamReader isr = new InputStreamReader(System.in);
+	    BufferedReader br = new BufferedReader(isr);
+	    System.out.print("Numero mes: ");
+	    String numeromes = br. readLine(); // como es string el switch los case se ponen "", si fuera Int numeromes no haria falta
+	    switch (numeromes) {
+        case "1":
+            System.out.println("Enero");
+            break;
+        case "2":
+            System.out.println("Febrero");
+            break;
+        case "3":
+            System.out.println("Marzo");
+            break;
+        case "4":
+            System.out.println("Abril");
+            break;
+        case "5":
+            System.out.println("Mayo");
+            break;
+        case "6":
+            System.out.println("Junio");
+            break;
+        case "7":
+            System.out.println("Julio");
+            break;
+        case "8":
+            System.out.println("Agosto");
+            break;
+        case "9":
+            System.out.println("Septiembre");
+            break;
+        case "10":
+            System.out.println("Octubre");
+            break;
+        case "11":
+            System.out.println("Noviembre");
+            break;
+        case "12":
+            System.out.println("Diciembre");
+            break;
+        default:
+            System.out.println("Número inválido. Debe estar entre 1 y 12.");
+            break;
+    }
+    br.close();
+    isr.close();   
+	}
+
+	public static void ejercicio10() throws IOException {
+	    System.out.println("Ejercicio 10");
+	    System.out.println("Realiza una modificación del ejercicio anterior para que implemente un control de la entrada \r\n"
+	    		+ "por teclado (admitir sólo números del 1 al 12). ");
+	    InputStreamReader isr = new InputStreamReader(System.in);
+	    BufferedReader br = new BufferedReader(isr);
+	    System.out.print("Numero mes: ");
+	    String numeromesstring = br.readLine();
+	    int numeromes = Integer.parseInt(numeromesstring);
+	    if(numeromes < 1 || numeromes > 12) {
+	    	System.out.println("Solo validos numeros de 1 al 12");
+	    }
+	    switch (numeromes) {
+        case 1:
+            System.out.println("Enero");
+            break;
+        case 2:
+            System.out.println("Febrero");
+            break;
+        case 3:
+            System.out.println("Marzo");
+            break;
+        case 4:
+            System.out.println("Abril");
+            break;
+        case 5:
+            System.out.println("Mayo");
+            break;
+        case 6:
+            System.out.println("Junio");
+            break;
+        case 7:
+            System.out.println("Julio");
+            break;
+        case 8:
+            System.out.println("Agosto");
+            break;
+        case 9:
+            System.out.println("Septiembre");
+            break;
+        case 10:
+            System.out.println("Octubre");
+            break;
+        case 11:
+            System.out.println("Noviembre");
+            break;
+        case 12:
+            System.out.println("Diciembre");
+            break;
+        default:
+            System.out.println("Número inválido. Debe estar entre 1 y 12.");
+            break;
+    }
+
+    br.close();
+    isr.close();
+
+   }
+	
+
+	public static void ejercicio11() {
+	    System.out.println("Ejercicio 11");
+	    System.out.println("Implementa un programa que dado un DNI (sin letra) por teclado devuelva el DNI con la \r\n"
+	    		+ "letra correcta.");
+	    char[] arrayletras = {'T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X',
+                'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E'};
+	    Scanner teclado = new Scanner(System.in);
+        System.out.print("Introduce el número del DNI (sin letra): ");
+        int numeroDNI = teclado.nextInt();
+        int resto = numeroDNI % 23;
+        System.out.println("DNI con letra: " + numeroDNI + arrayletras[resto]);
+        teclado.close();
+	}
+
+	public static void ejercicio12() {
+	    System.out.println("Ejercicio 12");
+	    System.out.println(" Realiza un programa en Java que dadas 10 notas introducidas por teclado (valores de 0 a \r\n"
+	    		+ "10), las agrupe en suspensos, aprobados, notables, sobresalientes y matrícula, y muestre \r\n"
+	    		+ "por pantalla cuantas notas hay en cada grupo. ");
+	}
+
+	public static void ejercicio13() {
+	    System.out.println("Ejercicio 13");
+	    System.out.println(" Programa que lea un valor de grados centígrados desde teclado y lo muestre en grados \r\n"
+	    		+ "Fahrenheit con una precisión de 1 decimal. ");
+	}
+
+	public static void ejercicio14() {
+	    System.out.println("Ejercicio 14");
+	    System.out.println(" Desarrolla un programa que lea el valor del radio de una circunferencia y devuelva por \r\n"
+	    		+ "pantalla el diámetro y el área con una precisión de 3 decimales.");
+	}
+
+	public static void ejercicio15() {
+	    System.out.println("Ejercicio 15");
+	    System.out.println(" Amplia el programa anterior para que devuelve el volumen de una esfera definida por el \r\n"
+	    		+ "mismo radio. ");
+	}
+
+	public static void ejercicio16() {
+	    System.out.println("Ejercicio 16");
+	    System.out.println("Escribe un programa que dada la fecha de nacimiento de una persona devuelva su número \r\n"
+	    		+ "de la suerte (utiliza el algoritmo de cálculo que prefieras).");
+	}
+
+	public static void ejercicio17() {
+	    System.out.println("Ejercicio 17");
+	    System.out.println(" Realiza un programa que controle los requisitos de una contraseña introducida por teclado \r\n"
+	    		+ "(mínimo 5 caracteres, 1 número y 1 letra mayúscula). \r\n"
+	    		+ "");
+	}
+
+	public static void ejercicio18() {
+	    System.out.println("Ejercicio 18");
+	    System.out.println("Realiza un programa que calcule la raíz cuadrada de un número.");
+	}
+
+	public static void ejercicio19() {
+	    System.out.println("Ejercicio 19");
+	    System.out.println("Realiza un programa que determine si un número es positivo, negativo o cero.");
+	}
+
+	public static void ejercicio20() {
+	    System.out.println("Ejercicio 20");
+	    System.out.println("Realiza un programa que ordene tres números de mayor a menor.");
+	}
+
+	public static void ejercicio21() {
+	    System.out.println("Ejercicio 21");
+	    System.out.println("Realiza un programa que calcule el área de un círculo.");
+	}
+
+	public static void ejercicio22() {
+	    System.out.println("Ejercicio 22");
+	    System.out.println("Realiza un programa que convierta minutos a horas y minutos.");
+	}
+
+	public static void ejercicio23() {
+	    System.out.println("Ejercicio 23");
+	    System.out.println("Realiza un programa que muestre los números pares entre 1 y 50.");
+	}
+
+	public static void ejercicio24() {
+	    System.out.println("Ejercicio 24");
+	    System.out.println("Realiza un programa que calcule el volumen de una esfera.");
+	}
+
+	public static void ejercicio25() {
+	    System.out.println("Ejercicio 25");
+	    System.out.println("Realiza un programa que determine si una persona es mayor de edad.");
+	}
+
+	public static void ejercicio26() {
+	    System.out.println("Ejercicio 26");
+	    System.out.println("Realiza un programa que cuente cuántos caracteres tiene una frase.");
+	}
+
+	public static void ejercicio27() {
+	    System.out.println("Ejercicio 27");
+	    System.out.println("Realiza un programa que calcule el IVA de un producto.");
+	}
+
+	public static void ejercicio28() {
+	    System.out.println("Ejercicio 28");
+	    System.out.println("Realiza un programa que muestre los múltiplos de 5 hasta 100.");
+	}
+
+	public static void ejercicio29() {
+	    System.out.println("Ejercicio 29");
+	    System.out.println("Realiza un programa que determine si un número es divisible por otro.");
+	}
+
+	public static void ejercicio30() {
+	    System.out.println("Ejercicio 30");
+	    System.out.println("Realiza un programa que convierta una cadena a mayúsculas.");
+	}
+
+	public static void ejercicio31() {
+	    System.out.println("Ejercicio 31");
+	    System.out.println("Realiza un programa que calcule la media de una lista de números.");
+	}
+
+	public static void ejercicio32() {
+	    System.out.println("Ejercicio 32");
+	    System.out.println("Realiza un programa que muestre los días de la semana.");
+	}
+
+	public static void ejercicio33() {
+	    System.out.println("Ejercicio 33");
+	    System.out.println("Realiza un programa que calcule el área de un cuadrado.");
+	}
+
+	public static void ejercicio34() {
+	    System.out.println("Ejercicio 34");
+	    System.out.println("Realiza un programa que determine si una letra es vocal o consonante.");
+	}
+
+	public static void ejercicio35() {
+	    System.out.println("Ejercicio 35");
+	    System.out.println("Realiza un programa que muestre los números del 10 al 1 en orden descendente.");
+	}
+
+	public static void ejercicio36() {
+	    System.out.println("Ejercicio 36");
+	    System.out.println("Realiza un programa que calcule el doble y el triple de un número.");
+	}
+
+	public static void ejercicio37() {
+	    System.out.println("Ejercicio 37");
+	    System.out.println("Realiza un programa que determine si una palabra contiene la letra 'a'.");
+	}
+
+	public static void ejercicio38() {
+	    System.out.println("Ejercicio 38");
+	    System.out.println("Realiza un programa que muestre el número de palabras en una frase.");
+	}
+	
+}
