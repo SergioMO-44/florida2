@@ -1,35 +1,51 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, ScrollView } from 'react-native';
+import { View, Pressable, Text, Image, StyleSheet } from 'react-native';
+import { useState } from 'react';
 
 export default function App() {
+  const [color, setColor] = useState('yellow');
+
+  function handleOnPress() {
+    color === 'yellow' || color === 'blue'
+      ? setColor('green')
+      : setColor('blue');
+  }
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <Text>Hola mundo</Text>
-      <Image style={{ width: 400, height: 400 }} source={require('./assets/paisaje.jpg')}/>
-      <ScrollView style={styless.scroll}>
-      <Text>Elemento 1</Text>
-      <Text>Elemento 2</Text>
-      <Text>Elemento 3</Text>
-      {/* Puedes seguir agregando más */}
-    </ScrollView>
-  
-      <StatusBar style="auto" />
+    <View style={[styles.container, { backgroundColor: color }]}>
+      <Text style={styles.title}>My Title</Text>
+      <Image
+        style={styles.image}
+        source={require('../assets/favicon.png')}
+      />
+      <Pressable onPress={handleOnPress}>
+        <Text style={styles.text}>Púlsame!</Text>
+      </Pressable>
     </View>
   );
 }
-const styless = StyleSheet.create({
-  scroll: {
-    padding: 20,
-  },
-});
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 100,
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'yellow',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  title: {
+    fontSize: 25,
+    fontWeight: 'bold',
+    fontStyle: 'italic',
+    textDecorationLine: 'underline',
+  },
+  image: {
+    width: 200,
+    height: 200,
+  },
+  text: {
+    height: 40,
+    width: 80,
+    backgroundColor: 'blue',
+    borderRadius: 8,
+    padding: 6,
   },
 });

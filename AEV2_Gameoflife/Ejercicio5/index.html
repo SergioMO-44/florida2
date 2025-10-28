@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Juego de la Vida</title>
+    <style>
+      canvas {
+        border: 1px solid;
+        image-rendering: pixelated;
+      }
+      body {
+        margin: 16px;
+        font-family: system-ui, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Juego de la Vida</h1>
+    <canvas id="life" width="640" height="480"></canvas>
+    <p id="info">Generación: 0</p>
+    <button onclick="resetBtn()">Reiniciar</button>
+    <button onclick="loadPattern('blinker')">Blinker</button>
+    <button onclick="loadPattern('toad')">Toad</button>
+    <button onclick="loadPattern('beacon')">Beacon</button>
+    <button onclick="loadPattern('glider')">Glider</button>
+    <script src="js/main.js"></script>
+  </body>
+</html>
